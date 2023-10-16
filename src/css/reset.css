@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/*
+  A CSS reset stylesheet is a list of rules that 'reset' almost all of the default styles. (aka browser styles)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border-style: none;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+body {
+  /* font-family:'Wingdings', 'Wingdings 2', 'Wingdings 3', 'Webdings'; */
+  font-family:'Nunito Sans', 'Open Sans', Arial, sans-serif;
+  font-size:16px;
+  line-height:1.4;
+}
+
+p {
+  letter-spacing:0px;
+}

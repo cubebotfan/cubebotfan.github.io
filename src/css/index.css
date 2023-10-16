@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body {
+  background-color: #808080;
+}
+
+.center {
+  align-items:center;
+  height: 100vh;
+
+  text-align: center; /* WHY IS THE CANVAS AFFECTED BY TEXT ALIGN? */
+}
+.center > div {
+  width: 100%;
+}
+
+.game-canvas {
+  width:1200px;
+  height:800px;
+  border:1px solid #E0E0E0;
+
+  background-color: #C0C0C0;
+}
+
+
+
+@media (max-width:1200px) or (max-height:800px) {
+  .game-canvas {
+    width:900px;
+    height:600px;
+  }
+}
+@media (max-width:900px) or (max-height:600px) {
+  .game-canvas {
+    width:600px;
+    height: 400px;
+  }
+}
