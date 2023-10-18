@@ -23,16 +23,16 @@ class WizardGameLevel {
     */
     this.radius = 1600;
 
-    /** @type {Player} */
-    this.player = new Player(this, 0, 0);
+    // /** @type {Player} */
+    // this.player = new Player(this, 0, 0);
     /** @type {Wizard} */
-    this.cameraTarget = this.player;
-    this.addWizard(this.player);
+    this.cameraTarget = null;
+    // this.addWizard(this.player);
     //this.player.spell = MagicBreath; //testing
 
-    for (let i=0;i<32;++i) {
-      this.addWizard(new Enemy(this, Math.random()*this.radius-this.radius/2, Math.random()*this.radius-this.radius/2));
-    }
+    // for (let i=0;i<32;++i) {
+    //   this.addWizard(new Enemy(this, Math.random()*this.radius-this.radius/2, Math.random()*this.radius-this.radius/2));
+    // }
 
     //65,536 magic projectiles to test the grid.
     //Uses about a quarter of my cpu which is great since we won't be reaching anywhere close to 65,536 projectiles.
@@ -99,82 +99,43 @@ class WizardGameLevel {
       let returnval = this.wizards[i].after(this);
       switch (returnval) {
         case AFTER_CODE.DESTROY:
-          this.wizards[i].destroy(this);
-          this.wizards.splice(i,1);
+          this.destroyWizard(i);
           break;
-        default:
-      }
-    }
-
-    for (let i=this.magic.length-1;i>=0;--i) {
-      let returnval = this.magic[i].after(this);
-      switch (returnval) {
-        case AFTER_CODE.DESTROY:
-          this.magic[i].destroy(this);
-          this.magic.splice(i,1)[0].GridCell
-          break;
-        default:
-      }
-    }
-
-    if (this.player && !this.player.inWorld) {
-      this.player = null;
-    }
-    if (this.cameraTarget && !this.cameraTarget.inWorld) {
-      if (this.wizards.length>0) {
-        this.cameraTarget = this.wizards[0];
-      } else {
-        this.cameraTarget = null;
-      }
+          default:
+          }
+        }
+        
+        for (let i=this.magic.length-1;i>=0;--i) {
+          let returnval = this.magic[i].after(this);
+          switch (returnval) {
+            case AFTER_CODE.DESTROY:
+              this.destroyMagic(i);
+              break;
+              default:
+              }
+            }
+            
+            if (this.player && !this.player.inWorld) {
+              this.player = null;
+            }
+            if (this.cameraTarget && !this.cameraTarget.inWorld) {
+              if (this.wizards.length>0) {
+                this.cameraTarget = this.wizards[0];
+              } else {
+                this.cameraTarget = null;
+              }
     }
   }
-
-
-  /**
-   * Renders the level
-   */
-  draw() {
-    if (this.cameraTarget!=null) {
-      this.camera.setVector(this.cameraTarget);
-    }
-    this.camera.clear(this.getContext());
-    this.getContext().beginPath();
-    this.getContext().lineWidth = 5;
-    this.getContext().strokeStyle = "#000000";
-    this.camera.circle(this.getContext(), 0, 0, this.radius);
-    this.getContext().stroke();
-
-    //draw magic before wizards
-    this.grid.drawMagicIn(
-      this,
-      this.camera.PtWX(0),
-      this.camera.PtWY(0),
-      this.camera.PtWX(this.instance.canvas.width),
-      this.camera.PtWY(this.instance.canvas.height)
-    );
-    this.grid.drawWizardsIn(
-      this,
-      this.camera.PtWX(0),
-      this.camera.PtWY(0),
-      this.camera.PtWX(this.instance.canvas.width),
-      this.camera.PtWY(this.instance.canvas.height)
-    );
-
-    // if (this.player) {
-    //   this.player.drawHealthbar(this);
-    // }
-    this.grid.drawWizardsIn(
-      this,
-      this.camera.PtWX(0),
-      this.camera.PtWY(0),
-      this.camera.PtWX(this.instance.canvas.width),
-      this.camera.PtWY(this.instance.canvas.height),
-      "drawHealthbar"
-    );
-
-    this.getInput().reset();
+  
+  destroyWizard(i) {
+    this.wizards[i].destroy(this);
+    this.wizards.splice(i,1);
   }
-
+  destroyMagic(i) {
+    this.magic[i].destroy(this);
+    this.magic.splice(i,1); //[0].GridCell; //????? Was this an error
+  }
+  
   //These next 2 functions are a way for entities to get collision info.
   //I eventually want to make entities have no reference to the grid and this helps with that.
   /**
@@ -244,5 +205,55 @@ class WizardGameLevel {
       wizards = this.wizards;
     }
     return Wizard.nearestWizard(wizards,vector,self);
+  }
+
+  /**
+   * Renders the level
+   */
+  draw() {
+    if (this.cameraTarget!=null) {
+      this.camera.setVector(this.cameraTarget);
+    }
+    this.camera.clear(this.getContext());
+
+    this.drawBackground();
+
+    //draw magic before wizards
+    this.grid.drawMagicIn(
+      this,
+      this.camera.PtWX(0),
+      this.camera.PtWY(0),
+      this.camera.PtWX(this.instance.canvas.width),
+      this.camera.PtWY(this.instance.canvas.height)
+    );
+    this.grid.drawWizardsIn(
+      this,
+      this.camera.PtWX(0),
+      this.camera.PtWY(0),
+      this.camera.PtWX(this.instance.canvas.width),
+      this.camera.PtWY(this.instance.canvas.height)
+    );
+
+    // if (this.player) {
+    //   this.player.drawHealthbar(this);
+    // }
+    this.grid.drawWizardsIn(
+      this,
+      this.camera.PtWX(0),
+      this.camera.PtWY(0),
+      this.camera.PtWX(this.instance.canvas.width),
+      this.camera.PtWY(this.instance.canvas.height),
+      "drawHealthbar"
+    );
+
+    this.getInput().reset();
+  }
+
+  drawBackground() {
+    this.getContext().lineWidth = 5;
+    this.getContext().strokeStyle = "#000000";
+    this.getContext().beginPath();
+    this.camera.circle(this.getContext(), 0, 0, this.radius);
+    this.getContext().stroke();
   }
 }

@@ -95,4 +95,11 @@ Player.prototype.control = function (level) {
       this.spell = this.constructor.getSpell(i);
     }
   }
+
+  // if (level.getInput().mouseWheelY != 0) {
+  //   level.camera.setScale(level.camera.getScale() - level.getInput().mouseWheelY / 1200);
+  //   if (level.camera.getScale()<0) {
+  //     level.camera.setScale(0.05);
+  //   }
+  // }
 }

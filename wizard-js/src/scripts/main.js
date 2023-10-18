@@ -40,7 +40,7 @@ WizardGameInstance.prototype.startup = function() {
   this.canvas.height = 400;
 
   //TEMP
-  this.level = new WizardGameLevel(this);
+  this.level = new EndlessLevel(this);
   this.level.camera.setWidth(this.canvas.width);
   this.level.camera.setHeight(this.canvas.height);
 

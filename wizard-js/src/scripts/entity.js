@@ -74,7 +74,6 @@ class Entity extends Vector2 {
   /**
    * @param {WizardGameLevel} level 
    */
-  updateGridPos(level) {}
   collision(level) {} //no collision by default
   after(level) { return AFTER_CODE.NORMAL; }
   draw(level) {
