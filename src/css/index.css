@@ -8,6 +8,10 @@
 .col2 {
   width: calc(50% - 20px);
   flex: 0 0 auto;
+
+  padding: 5px;
+  border: 1px solid #D0D0D0;
+  border-radius:15px;
 }
 @media screen and (max-width: 880px) {
   .col2 {
@@ -16,9 +20,31 @@
   }
 }
 
+main .social {
+  margin-top: 20px;
+}
+main .social ul {
+  /* Something you never taught in class. It seems to work well here for me. */
+  width: max-content;
+  margin-inline: auto;
+}
+main .social ul li a {
+  transition: color 0.25s ease-in-out;
+  font-size: 32px;
+}
+main .social ul li a:hover {
+  color: #0099ff;
+}
+
 section h2 {
   text-align: center;
 }
 section p {
+  /* Balance wrap makes it look a bit better in my opinion. */
+  text-wrap: balance;
 
+  margin-top:16px;
+}
+section p + p {
+  
 }
