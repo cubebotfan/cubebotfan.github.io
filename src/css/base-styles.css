@@ -16,6 +16,7 @@
   --app-font-color: #000000;
   --app-button-color: #0000ff;
 }
+
 .container {
   width: min(1080px, 100% - 30px);
   margin-inline: auto;
@@ -26,7 +27,7 @@
 }
 
 .center {
-  align-items:center;
+  align-items: center;
 }
 
 a {
@@ -34,6 +35,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 ul {
   list-style: none;
   font-size: 0px;
@@ -46,46 +48,54 @@ body {
   flex-direction: column;
   background-color: var(--app-background-color);
 }
+
 /* - - - - - - - - - - 
   HEADER
  - - - - - - - - - - */
- header {
+header {
   background-color: var(--app-header-color);
   color: var(--app-header-font-color);
   height: var(--app-header-height);
   line-height: var(--app-header-height);
 
-  overflow: hidden; /* Need a better fix for this. Some of the nav doesn't fit. */
-  z-index:9;
+  overflow: hidden;
+  /* Need a better fix for this. Some of the nav doesn't fit. */
+  z-index: 9;
 }
+
 header h1 {
   width: 30%;
-  font-size:22px;
+  font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
 }
+
 header nav {
   width: 70%;
-  text-align:right;
+  text-align: right;
 }
+
 header nav ul {
   list-style-type: none;
   /* fixes a firefox whitespace bug */
   font-size: 0;
 }
+
 header nav ul li {
-  font-size:18px;
+  font-size: 18px;
   font-weight: 500;
   display: inline;
 }
+
 header nav ul li a {
   transition: color 0.25s ease-in-out;
-  display:inline-block;
+  display: inline-block;
   padding: 0px 20px;
 
   color: #FFFFFF;
   text-decoration: none;
 }
+
 header nav ul li a:hover {
   color: #3300CC;
   background-color: #33CCCC;
@@ -94,7 +104,7 @@ header nav ul li a:hover {
 /* - - - - - - - - - -
   MOBILE NAV
  - - - - - - - - - - */
- header .collapse {
+header .collapse {
   width: var(--app-nav-collapse-size);
   height: var(--app-nav-collapse-size);
   margin-top: calc((var(--app-header-height) - var(--app-nav-collapse-size)) / 2);
@@ -110,9 +120,10 @@ header .collapse i {
   font-size: 40px;
 }
 
-.mobile-nav { /* In the future, I would like to animate this dropping down. But I'll work on what I need first. */
+.mobile-nav {
+  /* In the future, I would like to animate this dropping down. But I'll work on what I need first. */
   display: none;
-  z-index:1;
+  z-index: 1;
 }
 
 .mobile-nav ul li a {
@@ -123,7 +134,7 @@ header .collapse i {
   border-bottom: 1px solid #808080;
   color: var(--app-font-color);
   transition: all 0.5s ease-in-out;
-  font-size:18px;
+  font-size: 18px;
   background-color: var(--app-background-color);
 }
 
@@ -134,7 +145,7 @@ header .collapse i {
 /* - - - - - - - - - -
   Switch the nav button with the hamburger icon when the screen gets too small.
  - - - - - - - - - - */
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   header nav {
     display: none;
   }
@@ -151,21 +162,21 @@ header .collapse i {
 /* - - - - - - - - - -
   MAIN
  - - - - - - - - - - */
- main {
+main {
   padding-top: 80px;
   padding-bottom: 80px;
- }
+}
 
 /* - - - - - - - - - -
   FOOTER
  - - - - - - - - - - */
- footer {
+footer {
   background-color: var(--app-footer-color);
   color: var(--app-footer-font-color);
   height: var(--app-footer-height);
   margin-top: auto;
   overflow: hidden;
-  z-index:9;
+  z-index: 9;
 }
 
 footer>div {
@@ -196,6 +207,7 @@ footer .social ul li {
 footer .social ul li+li {
   margin-left: 10px;
 }
+
 /* - - - - - - - - - -
   SOCIAL MENU
  - - - - - - - - - - */
@@ -216,10 +228,12 @@ footer .social ul li+li {
 /* - - - - - - - - - -
   HERO BANNER
  - - - - - - - - - - */
- .hero-banner {
+.hero-banner {
   /* https://unsplash.com/photos/black-laptop-computer-turned-on-on-table-vpOeXr5wmR4 */
-  background-image: /*linear-gradient(#00000000, #00000000),*/   url("../img/hero-banner.jpg");
-  height:360px;
+  background-image:
+    /*linear-gradient(#00000000, #00000000),*/
+    url("../img/hero-banner.jpg");
+  height: 360px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -230,15 +244,17 @@ footer .social ul li+li {
   display: flex;
 
   color: #FFFFFF;
-  font-size:32px;
+  font-size: 32px;
 
-  /* position: absolute; */ /* breaks things */
+  /* position: absolute; */
+  /* breaks things */
   /* top: var(--app-header-height); */
 }
+
 /* - - - - - - - - - -
   BLUE LINKS
  - - - - - - - - - - */
- a.bluelink {
+a.bluelink {
   text-decoration: underline;
-  color:#0000FF;
- }
+  color: #0000FF;
+}

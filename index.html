@@ -1,123 +1,128 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-    
+<html lang="en">
 
-    <!-- <meta name="viewport" content="width=device-width, initial-scale"> -->
-    <meta name="author" content="Ehren Strifling">
-    <meta name="description" content="Ehren-Strifling Website">
-    <!--Use commas and a space to separate keywords-->
-    <meta name="keywords" content="Ehren Strifling"> 
-    
-    <title>Ehren Strifling</title>
+<head>
+  <meta charset="utf-8">
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale"> -->
+  <meta name="author" content="Ehren Strifling">
+  <meta name="description" content="Ehren-Strifling Website">
+  <!--Use commas and a space to separate keywords-->
+  <meta name="keywords" content="Ehren Strifling">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Ehren Strifling</title>
 
-    <link rel="stylesheet" href="./src/css/base-styles.css">
-    <link rel="stylesheet" href="./src/css/index.css">
 
-    <script src="src/scripts/mobile-menu.js"></script>
-    </head>
-    <body>
-      <header>
-        <div class="container flex">
-          <h1>Ehren Strifling</h1>
-          <nav>
-            <ul>
-              <li><a href="https://github.com/ehren-strifling" target="_blank">Github</a></li>
-              <li><a href="https://github.com/ehren-strifling?tab=repositories" target="_blank">Projects</a></li>
-              <li><a href="#about-me">About Me</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="collapse">
-            <a onclick="showMenu(event)">
-              <i class='bx bx-menu'></i>
-            </a>
-          </div>
-        </div>
-      </header>
-      <div class="mobile-nav">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="./src/css/base-styles.css">
+  <link rel="stylesheet" href="./src/css/index.css">
+
+  <script src="src/scripts/mobile-menu.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container flex">
+      <h1>Ehren Strifling</h1>
+      <nav>
         <ul>
           <li><a href="https://github.com/ehren-strifling" target="_blank">Github</a></li>
           <li><a href="https://github.com/ehren-strifling?tab=repositories" target="_blank">Projects</a></li>
           <li><a href="#about-me">About Me</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+      <div class="collapse">
+        <a onclick="showMenu(event)">
+          <i class='bx bx-menu'></i>
+        </a>
       </div>
-      <div class="hero-banner">
-        <div>
-          <h2>Hello World</h2>
+    </div>
+  </header>
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="https://github.com/ehren-strifling" target="_blank">Github</a></li>
+      <li><a href="https://github.com/ehren-strifling?tab=repositories" target="_blank">Projects</a></li>
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="hero-banner">
+    <div>
+      <h2>Hello World</h2>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <section>
+        <h2>My Projects</h2>
+        <div class="banner wizard-js">
+          <h3>Wizard JS</h3>
+          <a href="https://ehren-strifling.github.io/wizard-js-remake/" target="_blank">play game</a>
         </div>
-      </div>
-      <main>
-        <div class="container">
-          <section>
-            <h2>My Projects</h2>
-            <div class="banner wizard-js">
-              <h3>Wizard JS</h3>
-              <a href="https://ehren-strifling.github.io/wizard-js-remake/" target="_blank">play game</a>
-            </div>
-            <!--My JavaScript game library. 
+        <!--My JavaScript game library. 
               It's mainly here to make the page look better by having more than 1 banner-->
-            <div class="banner xander-js-3">
-              <h3>xander-js-3</h3>
-              <a href="https://github.com/ehren-strifling/xander-js-3" target="_blank">view repository</a>
-            </div>
-          </section>
-          <div class="columns">
-            <section class="col2">
-              <h2 id="about-me">About me</h2>
-              <p>
-                I'm a Software Developer student at MITT.
-                And I am passionate about creating webpages and games from the ground up.
-              </p>
-              <p>
-                I have experience programming in JavaScript, Java, C# and C++ but when making games. 
-                I prefer coding in JavaScript and C++ for their different things they have to offer. 
-                I want to learn assembly languages in the future so that I can truely build a game from nothing.
-              </p>
-            </section>
-            <section class="col2">
-              <h2 id="contact">Contact</h2>
-              <p>
-                If you find any issues or have suggestions, you can create an issue on the project's repository.
-              </p>
-              <p>
-                If you want to contact me for other reasons, your best option would be to send me an email: 
-                <a href="mailto: ehrenstrifling@gmail.com" target="_blank" class="bluelink">ehrenstrifling@gmail.com</a>
-              </p>
-              <div class="social">
-                <ul> 
-                  <!--I would separate this to 2 sections for contacts and social... But I only have 2 reliable contact.-->
-                  <!--I deleted my reddit. And I never go on and could delete my account any day now-->
-                  <li><a href="mailto: ehrenstrifling@gmail.com" target="_blank"><i class='bx bxs-envelope'></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCKjKyrP771mY6kLtnICiIUg" target="_blank"><i class='bx bxl-youtube'></i></a></li>
-                  <li><a href="https://github.com/ehren-strifling" target="_blank"><i class='bx bxl-github'></i></a></li>
-                </ul>
-              </div>
-            </section>
-          </div>
+        <div class="banner xander-js-3">
+          <h3>xander-js-3</h3>
+          <a href="https://github.com/ehren-strifling/xander-js-3" target="_blank">view repository</a>
         </div>
-      </main>
-      <footer>
-        <div class="container">
-          <div class="copy">
-            <p>&copy; 2023 Ehren Strifling</p>
-          </div>
+      </section>
+      <div class="columns">
+        <section class="col2">
+          <h2 id="about-me">About me</h2>
+          <p>
+            I'm a Software Developer student at MITT.
+            And I am passionate about creating webpages and games from the ground up.
+          </p>
+          <p>
+            I have experience programming in JavaScript, Java, C# and C++ but when making games.
+            I prefer coding in JavaScript and C++ for their different things they have to offer.
+            I want to learn assembly languages in the future so that I can truely build a game from nothing.
+          </p>
+        </section>
+        <section class="col2">
+          <h2 id="contact">Contact</h2>
+          <p>
+            If you find any issues or have suggestions, you can create an issue on the project's repository.
+          </p>
+          <p>
+            If you want to contact me for other reasons, your best option would be to send me an email:
+            <a href="mailto: ehrenstrifling@gmail.com" target="_blank" class="bluelink">ehrenstrifling@gmail.com</a>
+          </p>
           <div class="social">
             <ul>
-              <li><a href="https://www.youtube.com/channel/UCKjKyrP771mY6kLtnICiIUg" target="_blank"><i class='bx bxl-youtube'></i></a></li>
+              <!--I would separate this to 2 sections for contacts and social... But I only have 2 reliable contact.-->
+              <!--I deleted my reddit. And I never go on and could delete my account any day now-->
+              <li><a href="mailto: ehrenstrifling@gmail.com" target="_blank"><i class='bx bxs-envelope'></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCKjKyrP771mY6kLtnICiIUg" target="_blank"><i
+                    class='bx bxl-youtube'></i></a></li>
               <li><a href="https://github.com/ehren-strifling" target="_blank"><i class='bx bxl-github'></i></a></li>
             </ul>
           </div>
-        </div>
-      </footer>
-    </body>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="copy">
+        <p>&copy; 2023 Ehren Strifling</p>
+      </div>
+      <div class="social">
+        <ul>
+          <li><a href="https://www.youtube.com/channel/UCKjKyrP771mY6kLtnICiIUg" target="_blank"><i
+                class='bx bxl-youtube'></i></a></li>
+          <li><a href="https://github.com/ehren-strifling" target="_blank"><i class='bx bxl-github'></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
