@@ -132,13 +132,12 @@ main .social ul li a:hover {
   color: #0099ff;
 }
 
-section .col2 h2 {
+section.col2 h2 {
   text-align: center;
 }
 
-section .col2 p {
+section.col2 p {
   /* Balance wrap makes it look a bit better in my opinion. */
   text-wrap: balance;
-
   margin-top: 16px;
 }
