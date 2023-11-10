@@ -2,18 +2,19 @@
 @import url(./reset.css);
 
 :root {
-  --app-header-color: #3300CC;
-  --app-header-font-color: #FFFFFF;
+  --app-header-color: #3300cc;
+  --app-header-font-color: #ffffff;
   --app-header-height: 60px;
   --app-nav-collapse-size: 40px;
 
   --app-footer-color: #292d3a;
-  --app-footer-font-color: #FFFFFF;
+  --app-footer-font-color: #ffffff;
   --app-footer-height: 60px;
 
 
-  --app-background-color: #F1F2F4;
+  --app-background-color: #f1f2f4;
   --app-font-color: #000000;
+  --app-button-color: #0000ff;
 }
 .container {
   width: min(1080px, 100% - 30px);
@@ -59,7 +60,7 @@ body {
 }
 header h1 {
   width: 30%;
-  font-size:18px;
+  font-size:22px;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -73,7 +74,7 @@ header nav ul {
   font-size: 0;
 }
 header nav ul li {
-  font-size:16px;
+  font-size:18px;
   font-weight: 500;
   display: inline;
 }
@@ -106,7 +107,7 @@ header nav ul li a:hover {
 header .collapse i {
   line-height: var(--app-nav-collapse-size);
   color: var(--app-header-font-color);
-  font-size: 28px;
+  font-size: 40px;
 }
 
 .mobile-nav { /* In the future, I would like to animate this dropping down. But I'll work on what I need first. */
