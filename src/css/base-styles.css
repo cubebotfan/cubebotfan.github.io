@@ -235,3 +235,10 @@ footer .social ul li+li {
   /* position: absolute; */ /* breaks things */
   /* top: var(--app-header-height); */
 }
+/* - - - - - - - - - -
+  BLUE LINKS
+ - - - - - - - - - - */
+ a.bluelink {
+  text-decoration: underline;
+  color:#0000FF;
+ }
