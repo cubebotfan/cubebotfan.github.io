@@ -1,1 +1,24 @@
 @charset "utf-8";
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.col2 {
+  width: calc(50% - 20px);
+  flex: 0 0 auto;
+}
+@media screen and (max-width: 880px) {
+  .col2 {
+    width: min(540px, 100% - 30px);
+    margin-inline: auto;
+  }
+}
+
+section h2 {
+  text-align: center;
+}
+section p {
+
+}

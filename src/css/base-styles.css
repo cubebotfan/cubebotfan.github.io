@@ -229,6 +229,7 @@ footer .social ul li+li {
   display: flex;
 
   color: #FFFFFF;
+  font-size:32px;
 
   /* position: absolute; */ /* breaks things */
   /* top: var(--app-header-height); */
