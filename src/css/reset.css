@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border-style: none;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
